@@ -5,6 +5,7 @@ services:
   - docker
 
 before_install:
+- ./mvnw clean install -B
 - docker build -t myproject .
 - docker run -p 127.0.0.1:8080:8080 myproject
 - docker ps -a
