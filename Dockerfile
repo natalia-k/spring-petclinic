@@ -4,4 +4,4 @@ RUN git clone https://github.com/spring-projects/spring-petclinic.git
 RUN cd spring-petclinic; ./mvnw package
 WORKDIR /spring-petclinic/
 EXPOSE 8080
-CMD java -jar target/*.jar
+CMD ["java", "-jar", "target/*.jar"]
