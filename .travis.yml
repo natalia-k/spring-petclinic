@@ -11,4 +11,4 @@ jdk: oraclejdk8
 
 script:
 #  - curl 127.0.0.1:8080
-./mvnw spring-boot:run
+- ./mvnw spring-boot:run
