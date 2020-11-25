@@ -4,4 +4,4 @@ WORKDIR '/spring-petclinic'
 
 COPY . .
 
-CMD ["mvnw", "test"]
+CMD ["mvnw", "package"]
