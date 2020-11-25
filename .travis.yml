@@ -6,11 +6,12 @@ services:
   - docker
 
 before_install:
-  - docker build --target build -t natalia-k/spring-petclinic .
+  - docker build --target=builder -t natalia-k/spring-petclinic .
   # ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
 script:
-  - docker run -e CI=true natalia-k/spring-petclinic ./mvnw test
+ # - docker run -e CI=true natalia-k/spring-petclinic ./mvnw test
+  - docker build -t natalia-k/spring-petclinic .
   # - docker run natalia-k/spring-petclinic mvnw test -- --coverage
   # ./mvnw test -B
 
