@@ -1,3 +1,4 @@
+sudo: required
 language: java
 jdk: openjdk11
 
@@ -5,14 +6,9 @@ services:
   - docker
 
 before_install:
-- ./mvnw clean install -B
-- docker build -t myproject .
-- docker run -p 127.0.0.1:8080:8080 myproject
-- docker ps -a
+  - docker build -t natalia-k/spring-petclinic -f Dockerfile.dev .
 
 script:
-  - curl 127.0.0.1:8080
-#- ./mvnw spring-boot:run
-#- ./mvnw package
-#- java -jar target/*.jar
-#- curl 127.0.0.1:8080
+  - docker run -e CI=true natalia-k/spring-petclinic mvnw test
+
+
