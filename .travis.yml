@@ -14,3 +14,10 @@ script:
   # - docker run natalia-k/spring-petclinic mvnw test -- --coverage
   # ./mvnw test -B
 
+after_success:
+    - docker build -t natalia-k/spring-petclinic -f Dockerfile .
+    - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+    - docker tag spring-petclinic $DOCKER_USER/spring-petclinic:$TRAVIS_BUILD_NUMBER
+    - docker push $DOCKER_USER/spring-petclinic:$TRAVIS_BUILD_NUMBER
+    - docker tag spring-petclinic $DOCKER_USER/spring-petclinic:latest
+    - docker push $DOCKER_USER/spring-petclinic:latest
