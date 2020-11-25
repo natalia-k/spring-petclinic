@@ -1,7 +1,0 @@
-FROM adoptopenjdk/openjdk11:alpine
-
-WORKDIR '/spring-petclinic'
-
-COPY . .
-
-CMD ["mvnw", "package"]
