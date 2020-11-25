@@ -10,12 +10,11 @@ before_install:
   # ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
 script:
-  - docker run -e CI=true natalia-k/spring-petclinic ./mvnw test -B
+  - docker run -e CI=true natalia-k/spring-petclinic ./mvnw test
   # - docker run natalia-k/spring-petclinic mvnw test -- --coverage
   # ./mvnw test -B
 
 after_success:
-    - docker build --target run -t natalia-k/spring-petclinic .
     - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - docker tag spring-petclinic $DOCKER_USER/spring-petclinic:$TRAVIS_BUILD_NUMBER
     - docker push $DOCKER_USER/spring-petclinic:$TRAVIS_BUILD_NUMBER
