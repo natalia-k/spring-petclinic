@@ -9,7 +9,7 @@ services:
 #   - docker build -t natalia-k/spring-petclinic .
 
 script:
-    # - docker run -e CI=true natalia-k/spring-petclinic ./mvnw test -ntp
+   - docker run -e CI=true natalia-k/spring-petclinic ./mvnw test -B
    - docker build -t natalia-k/spring-petclinic .
 
 after_success:
