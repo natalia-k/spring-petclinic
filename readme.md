@@ -3,6 +3,14 @@
 ## Understanding the Spring Petclinic application with a few diagrams
 <a href="https://speakerdeck.com/michaelisvy/spring-petclinic-sample-application">See the presentation here</a>
 
+## CI pipeline using Maven and Docker for packaging and running
+This exemplar configuration includes:
+
+- Packaging as a Docker image.
+- Pipeline as code with Travis CI.
+- Docker image 
+
+
 ## Running petclinic in a Docker Container
 ```
 $ docker run  -p 8080:8080 natalia-k/spring-petclinic
