@@ -10,7 +10,7 @@ before_install:
 
 script:
    - docker run -e CI=true natalia-k/spring-petclinic ./mvnw test -ntp
-  # - docker build --target=run -t natalia-k/spring-petclinic .
+  #  - docker build --target=run -t natalia-k/spring-petclinic .
 
 after_success:
     - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
