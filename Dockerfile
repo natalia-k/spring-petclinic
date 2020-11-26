@@ -7,4 +7,4 @@ RUN ./mvnw  package > /dev/null
 # FROM alpine as run
 # COPY --from=builder /app/source/target/*.jar /app/app.jar
 EXPOSE 8080
-CMD ["java", "-jar", "/target/*.jar"]
+CMD ["java", "-jar", "target/*.jar"]
