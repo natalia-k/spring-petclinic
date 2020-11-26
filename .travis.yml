@@ -7,13 +7,10 @@ services:
 
 before_install:
   - docker build --target=builder -t natalia-k/spring-petclinic .
-  # ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
 script:
   - docker run -e CI=true natalia-k/spring-petclinic ./mvnw test -Dmaven.javadoc.skip=true -B -V
   - docker build --target=run -t natalia-k/spring-petclinic .
-  # - docker run natalia-k/spring-petclinic mvnw test -- --coverage
-  # ./mvnw test -B
 
 after_success:
     - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
