@@ -20,16 +20,17 @@ script:
 #   - docker push $DOCKER_USER/spring-petclinic:latest
 
 deploy:
-  provider: elasticbeanstalk
-  access_key_id: $AWS_ACCESS_KEY_ID
-  secret_access_key: "$AWS_SECRET_ACCESS_KEY"
-  region: "eu-central-1"
-  app: "spring-petclinic"
-  env: "springpetclinic-env-1"
-  bucket_name: "elasticbeanstalk-eu-central-1-743863471753"
-  bucket_path: "spring-petclinic"
-  on:
-    branch: master
+  - provider: elasticbeanstalk
+    access_key_id: $AWS_ACCESS_KEY_ID
+    secret_access_key: "$AWS_SECRET_ACCESS_KEY"
+    region: "eu-central-1"
+    app: "spring-petclinic"
+    env: "springpetclinic-env-1"
+    bucket_name: "elasticbeanstalk-eu-central-1-743863471753"
+    bucket_path: "spring-petclinic"
+    on:
+      branch: master
+
 # deploy:
 #   - docker run
 #   - curl -sL -w "%{http_code}\\n" "http://localhost/adop-docker-compose/" -o /dev/null | grep "200" &> /dev/null
