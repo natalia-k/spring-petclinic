@@ -6,11 +6,11 @@ services:
   - docker
 
 before_install:
-  - docker build --target=builder -t spring-petclinic .
+  - docker build -t spring-petclinic .
 
 script:
   - docker run -e CI=true spring-petclinic ./mvnw test -B
-  - docker build --target=run -t spring-petclinic .
+  # - docker build --target=run -t spring-petclinic .
 
 # after_success:
 #   - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
