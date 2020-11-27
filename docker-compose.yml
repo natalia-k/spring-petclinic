@@ -12,3 +12,7 @@ services:
       - MYSQL_DATABASE=petclinic
     volumes:
       - "./conf.d:/etc/mysql/conf.d:ro"
+  spring-petclinic:
+    build: .
+    ports:
+      - '8080:8080'  
