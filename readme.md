@@ -1,6 +1,6 @@
 # Spring PetClinic Sample Application [![Build Status](https://travis-ci.org/natalia-k/spring-petclinic.svg?branch=main)](https://travis-ci.org/github/natalia-k/spring-petclinic)
 
-## Fore details about the Spring Petclinic in the [original repo](https://github.com/spring-projects/spring-petclinic)
+## More details about the Spring Petclinic in the [original repo](https://github.com/spring-projects/spring-petclinic)
 
 ## Deployment Workflow
 A representation of the deployment workflow is as follows:
