@@ -7,10 +7,10 @@ A representation of the deployment workflow is as follows:
 
 <img src="./Deployment_Workflow_diagram.png">
 
-As you can see on the diagram, whenever we push some new code to our repository, it will notify Travis CI. 
+Whenever we push some new code to our repository, it will notify Travis CI. 
 Travis CI will then run the tests.
 If all tests pass, Travis CI will then proceed with deploying the project on AWS. 
-(TODO - In case of a failure, Travis will stop and notify about the crash.)
+In case of a failure, Travis will stop and notify about the crash.
 
 The deployment process has four steps:
 - Setting-up Repository on GitHub.
