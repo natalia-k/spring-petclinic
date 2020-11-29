@@ -30,9 +30,3 @@ deploy:
     # bucket_path: "spring-petclinic"
     # on:
     #   branch: master
-
-# deploy:
-#   - docker run
-#   - curl -sL -w "%{http_code}\\n" "http://localhost/adop-docker-compose/" -o /dev/null | grep "200" &> /dev/null
-#   - curl -o /dev/null -s -w "%{http_code}\n" http://localhost:8080/
-#   - docker stop
