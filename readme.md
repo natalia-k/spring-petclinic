@@ -1,4 +1,3 @@
-# Spring PetClinic Sample Application [![Build Status](https://travis-ci.org/natalia-k/spring-petclinic.svg?branch=main)](https://travis-ci.org/github/natalia-k/spring-petclinic)
 
 ## More details about the Spring Petclinic in the [original repo](https://github.com/spring-projects/spring-petclinic)
 
